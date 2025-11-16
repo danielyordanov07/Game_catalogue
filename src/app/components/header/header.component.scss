@@ -4,14 +4,6 @@ html, body {
     box-sizing: border-box;
 }
 
-button {
-    font-size: 2.5rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    aspect-ratio: 1 / 1;
-}
-
 div#header {
     display: flex;
     position: fixed;
@@ -27,10 +19,18 @@ div#header {
     background-color: lightcyan;
 }
 
-div#catalogue-container {
-    display: flex;
+button {
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+} 
+
+catalogue {
+    display: fixed;
     position: fixed;
-    z-index: 5;
+    z-index: 9;
 
     bottom: 0;
     left: 0;
@@ -43,5 +43,9 @@ div#catalogue-container {
     align-self: center;
     gap: 2vw;
 
+    transition: 0.5s all ease-in-out;
     background-color: rgb(117, 18, 117);
+}
+.hidden {
+    bottom: calc(85vh - 3px);
 }

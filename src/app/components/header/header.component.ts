@@ -13,9 +13,8 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
   ]
 })
 export class HeaderComponent {
-  trigger = signal(true);
-
   toggleCatalogue() {
-    this.trigger.update(v => !v);
+    const catalogue = document.querySelector('catalogue');
+    catalogue?.classList.toggle('hidden');
   }
 }
