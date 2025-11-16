@@ -1,4 +1,6 @@
-<p>header works!</p>
+<div id="header" class="shadow-lg p-3 mb-5">
+    <button (click)="toggleCatalogue()">☰</button>
+</div>
 <div id="catalogue-container">
-    <catalogue></catalogue>
+    <catalogue [trigger]="trigger()"></catalogue>
 </div>

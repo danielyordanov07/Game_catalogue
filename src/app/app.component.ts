@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { HeaderComponent } from './components/header/header.component';
 
@@ -10,7 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
   styleUrl: './app.component.scss',
   imports: [
     RouterOutlet,
-    HeaderComponent
+    HeaderComponent,
   ]
 })
 export class AppComponent {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
 
@@ -6,12 +6,16 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
   selector: 'header',
   standalone: true,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
   imports: [
     CommonModule,
     CatalogueComponent
   ]
 })
 export class HeaderComponent {
+  trigger = signal(true);
 
+  toggleCatalogue() {
+    this.trigger.update(v => !v);
+  }
 }
