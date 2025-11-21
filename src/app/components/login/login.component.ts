@@ -4,13 +4,13 @@ import { Auth } from '@angular/fire/auth';
 @Component({
   selector: 'login',
   standalone: true,
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
+  imports: []
 })
 export class LoginComponent {
   constructor(private auth: Auth){
-    
+
   }
   
 }

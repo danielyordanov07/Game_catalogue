@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'header',
@@ -9,7 +10,8 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
   styleUrls: ['./header.component.scss'],
   imports: [
     CommonModule,
-    CatalogueComponent
+    CatalogueComponent,
+    LoginComponent
   ]
 })
 export class HeaderComponent {

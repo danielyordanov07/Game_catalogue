@@ -1,11 +1,13 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// --- Firebase Imports ---
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAnalytics, provideAnalytics, isSupported } from '@angular/fire/analytics';
+import { getAuth, provideAuth } from '@angular/fire/auth'; // Assuming you still want Auth
+import { getFirestore, provideFirestore } from '@angular/fire/firestore'; // Assuming you still want Firestore
 
 const firebaseConfig = {
   apiKey: "AIzaSyB03tC-I2tkZtDupY0_SvlxhG9_ZHs-uMo",
@@ -17,10 +19,22 @@ const firebaseConfig = {
   measurementId: "G-JDC4LM3CLW"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration()]
+   providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideClientHydration(),
+
+    // --- Firebase Providers ---
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideAnalytics(() => {
+      if (isSupported()) {
+        return getAnalytics();
+      }
+      return {} as any;
+    })
+    // --- End Firebase Providers ---
+  ]
 };
