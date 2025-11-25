@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
-import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'header',
@@ -9,14 +9,18 @@ import { LoginComponent } from '../login/login.component';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   imports: [
+    RouterModule,
     CommonModule,
     CatalogueComponent,
-    LoginComponent
   ]
 })
 export class HeaderComponent {
   toggleCatalogue() {
     const catalogue = document.querySelector('catalogue');
-    catalogue?.classList.toggle('hidden');
+    console.log(catalogue);
+    if (catalogue)
+      catalogue.classList.toggle('hidden');
+    else
+      console.error('Catalogue component not found');
   }
 }

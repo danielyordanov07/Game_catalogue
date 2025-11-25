@@ -19,14 +19,6 @@ div#header {
     background-color: lightcyan;
 }
 
-button {
-    font-size: 2.5rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    aspect-ratio: 1 / 1;
-} 
-
 catalogue {
     display: fixed;
     position: fixed;
@@ -49,3 +41,25 @@ catalogue {
 .hidden {
     bottom: calc(85vh - 3px);
 }
+
+.middle {
+    flex-grow: 1;
+    text-align: center;
+    align-self: center;
+}
+
+#login-section {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+}
+button {
+    font-size: 1.7rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    padding: auto;
+    margin: auto;
+} 
