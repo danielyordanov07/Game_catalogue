@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <h3>Login</h3>
+    <form [formGroup]="f" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label>Email</label>
+        <input class="form-control" formControlName="email" />
+      </div>
+      <div class="mb-3">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password" />
+      </div>
+      <div *ngIf="error" class="text-danger mb-2">{{error}}</div>
+      <button class="btn btn-primary" [disabled]="f.invalid">Login</button>
+      <a class="btn btn-link" routerLink="/register">Register</a>
+    </form>
+  </div>

@@ -1,10 +1,28 @@
-<div id="header" class="shadow-lg p-3 mb-5">
-    <button (click)="toggleCatalogue()">☰</button>
-    <div class="middle">
-        <h1>Header</h1>
-    </div>
-    <div id="login-section">
-        <button routerLink="/auth">Login</button>
-    </div>
+<div id="header" class="shadow-lg p-3 mb-5 d-flex align-items-center">
+  <div id="homeBtn">
+    <button (click)="toggleCatalogue()" aria-label="Toggle catalogue">☰</button>
+  </div>
+
+  <div class="middle flex-grow-1 text-center">
+    <h1 class="m-0">Game Catalogue</h1>
+  </div>
+
+  <div id="account-section" class="text-end">
+    <ng-container *ngIf="user; else guestLinks">
+      <div class="lil d-flex align-items-center">
+        <span class="me-3" *ngIf="user.name">Hi, {{ user.name }}</span>
+        <a class="btn btn-sm btn-outline-primary me-2" routerLink="/profile">Profile</a>
+        <button class="btn btn-sm btn-outline-danger" (click)="logout()">Logout</button>
+      </div>
+    </ng-container>
+
+    <ng-template #guestLinks>
+      <div class="d-flex">
+        <a class="btn btn-sm btn-outline-primary me-2" routerLink="/login">Login</a>
+        <a class="btn btn-sm btn-link" routerLink="/register">Register</a>
+      </div>
+    </ng-template>
+  </div>
 </div>
+
 <catalogue></catalogue>

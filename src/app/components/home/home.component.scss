@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    z-index: 1;
+    margin-top: 15vh;
+    min-width: 80vw;
+    height: 85vh;
+    padding: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

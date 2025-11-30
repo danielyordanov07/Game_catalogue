@@ -1,1 +1,4 @@
-<header></header>
+<app-header [user]="user$ | async"></app-header>
+<div class="container shadow-lg" id="game-container">
+    <game-board></game-board>
+</div>

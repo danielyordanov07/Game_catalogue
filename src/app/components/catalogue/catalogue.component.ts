@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { data } from '../../../../data/games'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 @Component({
   selector: 'catalogue',
   standalone: true,

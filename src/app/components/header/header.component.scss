@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,6 +18,57 @@ div#header {
     height: 15vh;
 
     background-color: lightcyan;
+
+    #homeBtn {
+        cursor: pointer;
+        padding: auto;
+        margin: auto;
+        width: 20%;
+        justify-content: center;
+        margin-right: 15%;
+
+        button {
+            font-size: 2.4vw;
+            background-color: transparent;
+            border: none;
+            height: 100%;
+            aspect-ratio: 1/1 !important;
+            padding-left: 4%;
+        }
+    }
+
+    .middle {
+        justify-self: center;
+        text-align: center;
+        align-self: center;
+        width: 30%;
+
+        h1 {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    #account-section {
+        font-size: 1.3em;
+        display: flex;
+        justify-self: right;
+        width: 35%;
+        justify-content: flex-end;
+        gap: 10%;
+        align-items: center;
+        padding-right: 4%;
+
+        .lil {
+            max-width: 40%;
+        }
+        
+        a {
+            justify-self: right;
+            text-decoration: none;
+            color: black;
+        }
+    }
 }
 
 catalogue {
@@ -38,28 +90,7 @@ catalogue {
     transition: 0.5s all ease-in-out;
     background-color: rgb(117, 18, 117);
 }
+
 .hidden {
     bottom: calc(85vh - 3px);
 }
-
-.middle {
-    flex-grow: 1;
-    text-align: center;
-    align-self: center;
-}
-
-#login-section {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    aspect-ratio: 1 / 1;
-}
-button {
-    font-size: 1.7rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    aspect-ratio: 1 / 1;
-    padding: auto;
-    margin: auto;
-} 
