@@ -1,1 +1,22 @@
-<p>game-page works!</p>
+<div *ngIf="selectedGame()?.name === null; else hasGame">
+    no game selected
+</div>
+
+<ng-template #hasGame>
+    <h2><b>Game: </b>{{ selectedGame()?.name }}</h2>
+    <div class="side left">
+        <img class="shadow-lg" src="{{ selectedGame()?.imageURL }}">
+    </div>
+    <div class="side right">
+        <p><b>Genre: </b>
+        {{ selectedGame()?.genre }}</p>
+        <p><b>Price: </b>
+        {{ selectedGame()?.price }}</p>
+        <b>Description: </b>
+        <p>{{ selectedGame()?.description }}</p>
+
+        <div>
+            <button class="btn-options">Buy</button>
+        </div>
+    </div>
+</ng-template>

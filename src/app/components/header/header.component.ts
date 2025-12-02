@@ -23,7 +23,6 @@ export class HeaderComponent {
 
   toggleCatalogue() {
     const catalogue = document.querySelector('catalogue');
-    console.log(catalogue);
     if (catalogue)
       catalogue.classList.toggle('hidden');
     else

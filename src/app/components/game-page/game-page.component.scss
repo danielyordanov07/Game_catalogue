@@ -1,0 +1,47 @@
+h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.side {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.left {
+    float: inline-start;
+    align-self: left;
+
+    img {
+        width: 28vw;
+        height: 28vw;
+
+        border-radius: 8%;
+        border: whitesmoke;
+        border-radius: 10%;
+
+        overflow: hidden;
+
+    }
+}
+
+.right {
+    flex-direction: column;
+    float: inline-end;
+    align-self: right;
+
+    p {
+        max-height: 30ch;
+        overflow-y: auto;
+    }
+
+    button.btn-options {
+        width: fit-content;
+        padding: 0.3em 0.5em 0.3em 0.5em;
+    }
+}

@@ -1,5 +1,6 @@
 <div id="catalogue-container">
-    <div *ngFor="let game of games" class="game-item shadow-lg">
+    <div *ngFor="let game of games" class="game-item shadow-lg" (click)="openGamePage(game.name)">
+        <img src="{{ game.imageURL }}" alt="nope">
         <p>{{ game.name }}</p>
     </div>
 </div>

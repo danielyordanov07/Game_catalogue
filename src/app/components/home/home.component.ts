@@ -7,6 +7,7 @@ import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user.model';
 import { HeaderComponent } from '../header/header.component';
 import { GameBoardComponent } from "../game-board/game-board.component";
+import { GamePageComponent } from "../game-page/game-page.component";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,7 @@ import { GameBoardComponent } from "../game-board/game-board.component";
     CommonModule,
     HeaderComponent,
     RouterModule,
-    GameBoardComponent
+    GamePageComponent
 ]
 })
 export class HomeComponent {
