@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CatalogueComponent } from '../catalogue/catalogue.component';
 import { User } from '../../models/user.model';
 import { AuthService } from '../../services/auth.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ import { AuthService } from '../../services/auth.service';
   imports: [
     RouterModule,
     CommonModule,
-    CatalogueComponent
+    CatalogueComponent,
+    MatButtonModule
   ]
 })
 export class HeaderComponent {

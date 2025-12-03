@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { GameService } from '../../services/game.service';
 import { GameBoardComponent } from '../game-board/game-board.component';
 
+import { MatButtonModule } from '@angular/material/button';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 @Component({
@@ -12,7 +14,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   styleUrls: ['./game-page.component.scss'],
   imports: [
     CommonModule,
-    GameBoardComponent
+    GameBoardComponent,
+    MatButtonModule
   ]
 })
 export class GamePageComponent {
@@ -22,7 +25,7 @@ export class GamePageComponent {
     this.selectedGame = this.gameService.selectedGame;
   }
 
-  public clearSelect(){
+  public clearSelect() {
     this.gameService.setSelectedGame(null);
   }
 }

@@ -5,22 +5,22 @@
 <ng-template #hasGame>
     <div class="uppies">
         <h2><b>Game: </b>{{ selectedGame()?.name }}</h2>
-        <button (click)="clearSelect()">Da Dino</button>
+        <button mat-raised-button (click)="clearSelect()" class="da-dino">Da Dino</button>
     </div>
     <div class="side left">
         <img class="shadow-lg" src="{{ selectedGame()?.imageURL }}">
     </div>
     <div class="side right">
         <p><b>Genre: </b>
-        {{ selectedGame()?.genre }}</p>
+            {{ selectedGame()?.genre }}</p>
         <p><b>Price: </b>
-        {{ selectedGame()?.price }}</p>
+            {{ selectedGame()?.price }}</p>
         <b>Description: </b>
         <p>{{ selectedGame()?.description }}</p>
 
-        <div>
-            <button class="btn-outline-primary">Buy</button>
-            <button class="btn-outline-primary">Demo</button>
+        <div class="idkFRFR">
+            <button mat-raised-button class="btn-operations">Buy</button>
+            <button mat-raised-button class="btn-operations">Add to cart</button>
         </div>
     </div>
 </ng-template>

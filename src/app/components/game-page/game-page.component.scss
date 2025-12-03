@@ -15,10 +15,15 @@ div.uppies {
         display: flex;
         align-self: center;
         text-align: center;
+    }
+
+    button.da-dino {
         width: 15%;
         height: 2em;
         margin: 0 5% 0 5%;
     }
+
+
 }
 
 .side {
@@ -26,8 +31,8 @@ div.uppies {
     margin: 0;
     padding: 0;
     justify-self: center;
-    justify-content: center;
     width: 50%;
+    height: 28vw;
 }
 
 .left {
@@ -36,9 +41,8 @@ div.uppies {
 
     img {
         width: 28vw;
-        height: 28vw;
+        height: 100%;
 
-        border-radius: 8%;
         border: whitesmoke;
         border-radius: 10%;
 
@@ -53,12 +57,17 @@ div.uppies {
     align-self: right;
 
     p {
+        min-height: 3ch;
         max-height: 30ch;
+        width: 60%;
         overflow-y: auto;
     }
 
-    button.btn-options {
-        width: fit-content;
-        padding: 0.3em 0.5em 0.3em 0.5em;
+    div.idkFRFR {
+        padding-top: 10%;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+        gap: 7%;
     }
 }

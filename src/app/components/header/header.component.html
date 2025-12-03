@@ -11,15 +11,15 @@
     <ng-container *ngIf="user; else guestLinks">
       <div class="lil d-flex align-items-center">
         <span class="me-3" *ngIf="user.name">Hi, {{ user.name }}</span>
-        <a class="btn btn-sm btn-outline-primary me-2" routerLink="/profile">Profile</a>
-        <button class="btn btn-sm btn-outline-danger" (click)="logout()">Logout</button>
+        <button mat-raised-button routerLink="/profile">Profile</button>
+        <button mat-raised-button (click)="logout()">Logout</button>
       </div>
     </ng-container>
 
     <ng-template #guestLinks>
       <div class="d-flex">
-        <a class="btn btn-sm btn-outline-primary me-2" routerLink="/login">Login</a>
-        <a class="btn btn-sm btn-link" routerLink="/register">Register</a>
+        <a mat-raised-button routerLink="/login">Login</a>
+        <a mat-raised-button routerLink="/register">Register</a>
       </div>
     </ng-template>
   </div>
