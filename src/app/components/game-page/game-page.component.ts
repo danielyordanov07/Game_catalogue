@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../../services/game.service';
+import { GameBoardComponent } from '../game-board/game-board.component';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 @Component({
   selector: 'game-page',
@@ -8,7 +11,8 @@ import { GameService } from '../../services/game.service';
   templateUrl: './game-page.component.html',
   styleUrls: ['./game-page.component.scss'],
   imports: [
-    CommonModule
+    CommonModule,
+    GameBoardComponent
   ]
 })
 export class GamePageComponent {
@@ -16,5 +20,9 @@ export class GamePageComponent {
 
   constructor(private gameService: GameService) {
     this.selectedGame = this.gameService.selectedGame;
+  }
+
+  public clearSelect(){
+    this.gameService.setSelectedGame(null);
   }
 }

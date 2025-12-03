@@ -1,7 +1,24 @@
-h2 {
+div.uppies {
+    display: inline-flex;
+    flex-direction: row;
     width: 100%;
-    text-align: center;
     margin-bottom: 1em;
+
+    h2 {
+        display: flex;
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+    }
+
+    button {
+        display: flex;
+        align-self: center;
+        text-align: center;
+        width: 15%;
+        height: 2em;
+        margin: 0 5% 0 5%;
+    }
 }
 
 .side {

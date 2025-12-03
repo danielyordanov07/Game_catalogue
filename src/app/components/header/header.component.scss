@@ -10,6 +10,9 @@ div#header {
     position: fixed;
     z-index: 10;
 
+    padding: 0;
+    margin: 0;
+
     top: 0;
     left: 0;
     right: 0;
@@ -24,16 +27,26 @@ div#header {
         padding: auto;
         margin: auto;
         width: 20%;
-        justify-content: center;
+        max-height: 80%;
+        justify-content: left;
         margin-right: 15%;
 
         button {
-            font-size: 2.4vw;
+            display: flex;
             background-color: transparent;
             border: none;
             height: 100%;
-            aspect-ratio: 1/1 !important;
-            padding-left: 4%;
+            justify-content: left;
+
+            padding: 0;
+            margin: 0;
+
+            img {
+                top: 0;
+                left: 0;
+                max-width: 40%;
+                justify-self: left;
+            }
         }
     }
 

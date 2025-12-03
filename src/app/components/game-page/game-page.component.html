@@ -1,9 +1,12 @@
-<div *ngIf="selectedGame()?.name === null; else hasGame">
-    no game selected
-</div>
+<ng-container *ngIf="selectedGame()?.name === null; else hasGame">
+    <game-board></game-board>
+</ng-container>
 
 <ng-template #hasGame>
-    <h2><b>Game: </b>{{ selectedGame()?.name }}</h2>
+    <div class="uppies">
+        <h2><b>Game: </b>{{ selectedGame()?.name }}</h2>
+        <button (click)="clearSelect()">Da Dino</button>
+    </div>
     <div class="side left">
         <img class="shadow-lg" src="{{ selectedGame()?.imageURL }}">
     </div>
@@ -16,7 +19,8 @@
         <p>{{ selectedGame()?.description }}</p>
 
         <div>
-            <button class="btn-options">Buy</button>
+            <button class="btn-outline-primary">Buy</button>
+            <button class="btn-outline-primary">Demo</button>
         </div>
     </div>
 </ng-template>
