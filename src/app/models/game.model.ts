@@ -5,4 +5,6 @@ export interface Game {
   genre: string;
   price: number;
   imageURL: string; // URL to the image
+  publisher: string;
+  rating: number;
 }

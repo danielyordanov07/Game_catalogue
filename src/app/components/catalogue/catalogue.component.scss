@@ -1,14 +1,29 @@
+#catalogue-searchbar {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(100, 255, 255);
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    div.filters {
+        display: flex;
+        justify-content: center;
+        gap: 8%;
+    }
+}
+
 div#catalogue-container {
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
 
     width: 100%;
-    height: 100%;
+    height: 90%;
     margin: 0;
     padding: 2vw;
     border-bottom: lightblue 4px solid;
-    
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
     grid-auto-rows: minmax(22vw, auto);
@@ -23,15 +38,15 @@ div#catalogue-container {
     justify-content: flex-start;
     align-items: stretch;
     text-align: center;
-    
+
     width: 20vw;
     height: 20vw;
     border-radius: 8%;
     border: whitesmoke;
     border-radius: 10%;
-    background-color: lightcyan;
+    background-color: rgb(224, 255, 255);
     overflow: hidden;
-    
+
     img {
         width: 100%;
         height: calc(100% - 2.5rem);
@@ -39,7 +54,7 @@ div#catalogue-container {
         object-position: center;
         display: block;
     }
-    
+
     p {
         align-self: center;
         margin: 0;

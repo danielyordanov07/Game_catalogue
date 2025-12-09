@@ -1,5 +1,13 @@
+<div id="catalogue-searchbar" class="shadow-lg">
+    <b>Search by:</b>
+    <div class="filters">
+        <label for="name">Name: <input [ngModel]="nameField()" (ngModelChange)="nameField.set($event)" type="text" placeholder="Enter name..."></label>
+        <label for="publisher">Publisher: <input [ngModel]="publisherField()" (ngModelChange)="publisherField.set($event)" type="text" placeholder="Enter publisher..."></label>
+    </div>
+</div>
+
 <div id="catalogue-container">
-    <div *ngFor="let game of games" class="game-item shadow-lg" (click)="openGamePage(game.name)">
+    <div *ngFor="let game of filteredGames()" class="game-item shadow-lg" (click)="openGamePage(game.name)">
         <img src="{{ game.imageURL }}" alt="nope">
         <p>{{ game.name }}</p>
     </div>
